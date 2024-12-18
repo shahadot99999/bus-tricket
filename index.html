@@ -9,6 +9,18 @@
      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
      <script src="https://cdn.tailwindcss.com"></script>
 
+     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
 
      <!--icon  Kits -->
      <script src="https://kit.fontawesome.com/249647ca07.js" crossorigin="anonymous"></script>
@@ -18,12 +30,12 @@
 <body>
 
 
-    <!-- navbar start -->
-    <nav class="bg-white shadow">
-        <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Navbar -->
+    <nav class="bg-white shadow  p-4">
+        <div class="container  mx-auto px-4 py-4 flex items-center justify-between">
             <!-- Left Side -->
             <div class="text-lg font-bold">P Ticket</div>
-            
+    
             <!-- Middle Links -->
             <div class=" md:flex space-x-4">
                 <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
@@ -31,12 +43,37 @@
                 <a href="#" class="text-gray-700 hover:text-blue-500">Destination</a>
             </div>
             <!-- Right Side - Bus Icon -->
-            <div class="bg-lime-200 ">
-              <p class="text-xl">Bus <i class="fa-solid fa-bus font-bold"></i></p> 
+            <div class="text-gray-700 text-xl">
+                <i class="fa-solid fa-bus"></i>
             </div>
         </div>
     </nav>
-   
-      <!-- navbar End -->
+
+
+    <!-- slider start -->
+
+    <section>
+        <div class="relative container mx-auto mt-4">
+            <div class="relative flex items-center justify-center h-96 rounded-lg shadow-lg overflow-hidden">
+                <!-- Image Tag -->
+                <img src="images/01.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover" />
+    
+                <!-- Overlay for content centering -->
+                <div class="relative text-white text-center z-10">
+                    <h1 class="text-4xl font-bold mb-4">Welcome to My Website</h1>
+                    <p class="text-lg mb-6">This is a sample description text for the image section.</p>
+                    <button class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded shadow">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider End -->
+
+  
+    
+      
 </body>
 </html>
