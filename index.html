@@ -168,7 +168,7 @@
     <div class="container mx-auto bg-white shadow-md p-6">
         <div class="grid grid-cols-1 md:grid-cols-5 border border-gray-300 gap-4">
             <!-- First Column (Seats) -->
-            <div class="md:col-span-3 p-4 grid grid-cols-4 gap-4">
+            <div class="md:col-span-3 p-4 grid grid-cols-4 gap-3">
                 <div class="grid grid-cols-1 divide-y">
                     <div><p class="text-xl font-extrabold ">Select Your Seat</p></div>
 
@@ -185,13 +185,14 @@
                   </div>                
                 
                 <!-- Driver Icon -->
-                <div class="col-span-4 flex items-center">                   
-                    <span class="text-gray-800 text-lg">Driver</span>
+                <div class="col-span-4 flex items-end">
+                    <span class="text-gray-800 text-lg ml-auto">Driver</span>
                 </div>
+                
 
                 <!-- Generating 40 Seats -->
                 <kbd class="p-2 bg-gray-200 text-gray-800 rounded">A 1</kbd>
-                <kbd class="p-2 bg-gray-200 text-gray-800 rounded">A 2</kbd>
+                <kbd class="p-2 bg-gray-200 text-gray-800 rounded ">A 2</kbd>             
                 <kbd class="p-2 bg-gray-200 text-gray-800 rounded">A 3</kbd>
                 <kbd class="p-2 bg-gray-200 text-gray-800 rounded">A 4</kbd>
                 <kbd class="p-2 bg-gray-200 text-gray-800 rounded">B 1</kbd>
@@ -233,8 +234,47 @@
             </div>
 
             <!-- Vertical Separator (Hidden on Mobile) -->
-            <div class="hidden md:block border-l border-gray-300">
-                <p class="text-xl font-extrabold ml-4">Select Your Seat</p>
+            <div class=" border-l border-gray-300 ">
+                <p class="text-xl font-extrabold ml-4 mt-2">Select Your Seat</p>
+                <!-- <div class="divide-y ">                    
+                </div> -->
+                <div class="flex justify-center  min-w-full m-8">
+                    <table class="min-w-full table-auto border-collapse border border-gray-300">
+                      <!-- Table Header -->
+                      <thead>
+                        <tr class="border-b border-gray-300">
+                          <th class="px-4 py-2 text-left">Seat</th>
+                          <th class="px-4 py-2 text-left">Class</th>
+                          <th class="px-4 py-2 text-left">Price</th>
+                        </tr>
+                      </thead>
+                      
+                      <!-- Table Body -->
+                      <tbody>
+                        <!-- Empty row as per request -->
+                        <tr class="border-b border-gray-300">
+                          <td class="px-4 py-2"></td>
+                          <td class="px-4 py-2"></td>
+                          <td class="px-4 py-2"></td>
+                        </tr>
+                        <!-- Another empty row -->
+                        
+                        <!-- Additional rows as needed -->
+                      </tbody>
+                  
+                      <!-- Table Footer (Total Price) -->
+                      <tfoot>
+                        <tr class="border-t border-gray-300">
+                          <td class="px-4 py-2" colspan="2" class="text-right">Total Price:</td>
+                          <td class="px-4 py-2">$0.00</td>
+                        </tr>
+                        
+                      </tfoot>
+                    </table>
+                  </div>
+                  
+                  
+
             </div>
 
             <!-- Second Column (Empty/Other Content) -->
