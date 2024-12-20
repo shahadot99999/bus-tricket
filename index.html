@@ -169,9 +169,23 @@
         <div class="grid grid-cols-1 md:grid-cols-5 border border-gray-300 gap-4">
             <!-- First Column (Seats) -->
             <div class="md:col-span-3 p-4 grid grid-cols-4 gap-4">
-                <!-- Driver Icon -->
-                <div class="col-span-4 flex items-center">
+                <div class="grid grid-cols-1 divide-y">
+                    <div><p class="text-xl font-extrabold ">Select Your Seat</p></div>
+
+                    <div class=" mt-2 flex justify-between gap-x-32">
+                        <div class="flex "><img src="images/seat-gray.png" alt="Left Image" class="mr-1">
+                            <p>Available</p>
+                        </div>
+                        <div class="flex"><img src="images/seat-green-filled.png" alt="Right Image" class="ml-1">
+                            <p>Selected</p>
+                        </div>                    
+                    </div>
+                     <div></div>
                    
+                  </div>                
+                
+                <!-- Driver Icon -->
+                <div class="col-span-4 flex items-center">                   
                     <span class="text-gray-800 text-lg">Driver</span>
                 </div>
 
@@ -219,7 +233,9 @@
             </div>
 
             <!-- Vertical Separator (Hidden on Mobile) -->
-            <div class="hidden md:block border-l border-gray-300"></div>
+            <div class="hidden md:block border-l border-gray-300">
+                <p class="text-xl font-extrabold ml-4">Select Your Seat</p>
+            </div>
 
             <!-- Second Column (Empty/Other Content) -->
             <div class="md:col-span-2 p-4 flex items-center justify-center">
