@@ -238,7 +238,9 @@
                 <p class="text-xl font-extrabold ml-4 mt-2">Select Your Seat</p>
                 <!-- <div class="divide-y ">                    
                 </div> -->
-                <div class="flex justify-center  min-w-full m-8">
+
+                <div class="flex flex-col items-center min-w-full m-8">
+                    <!-- Ticket Table -->
                     <table class="min-w-full table-auto border-collapse border border-gray-300">
                       <!-- Table Header -->
                       <thead>
@@ -248,33 +250,75 @@
                           <th class="px-4 py-2 text-left">Price</th>
                         </tr>
                       </thead>
-                      
                       <!-- Table Body -->
-                      <tbody>
-                        <!-- Empty row as per request -->
+                      <tbody id="ticketRows">
+                        <!-- Example Row -->
                         <tr class="border-b border-gray-300">
-                          <td class="px-4 py-2"></td>
-                          <td class="px-4 py-2"></td>
-                          <td class="px-4 py-2"></td>
+                          <td class="px-4 py-2">1A</td>
+                          <td class="px-4 py-2">Economy</td>
+                          <td class="px-4 py-2">$100.00</td>
                         </tr>
-                        <!-- Another empty row -->
-                        
-                        <!-- Additional rows as needed -->
                       </tbody>
-                  
                       <!-- Table Footer (Total Price) -->
                       <tfoot>
                         <tr class="border-t border-gray-300">
-                          <td class="px-4 py-2" colspan="2" class="text-right">Total Price:</td>
-                          <td class="px-4 py-2">$0.00</td>
+                          <td class="px-4 py-2 text-right" colspan="2">Total Price:</td>
+                          <td class="px-4 py-2" id="totalPrice">$100.00</td>
                         </tr>
-                        
+                        <tr class="border-t border-gray-300">
+                          <td class="px-4 py-2 text-right" colspan="2">Discount Applied:</td>
+                          <td class="px-4 py-2" id="discount">$0.00</td>
+                        </tr>
+                        <tr class="border-t border-gray-300">
+                          <td class="px-4 py-2 text-right font-bold" colspan="2">Final Price:</td>
+                          <td class="px-4 py-2 font-bold" id="finalPrice">$100.00</td>
+                        </tr>
                       </tfoot>
                     </table>
+                  
+                    <!-- Discount Section -->
+                    <div class="w-full mt-6 flex justify-center">
+                      <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border w-3/4">
+                        <div class="collapse-title text-xl font-medium">Have any coupon</div>
+                        <div class="collapse-content">
+                          <button 
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" 
+                            onclick="applyDiscount(15)">
+                            Apply 15% Discount for buying 3 tricket
+                          </button>
+                          <button 
+                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2" 
+                            onclick="applyDiscount(20)">
+                            Apply 20% Discount for buying 4 tricket
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   
+                  <!-- <script>
+                    // Function to apply discount
+                    function applyDiscount(percentage) {
+                      const totalPriceElement = document.getElementById('totalPrice');
+                      const discountElement = document.getElementById('discount');
+                      const finalPriceElement = document.getElementById('finalPrice');
                   
-
+                      // Parse the current total price
+                      const totalPrice = parseFloat(totalPriceElement.textContent.replace('$', ''));
+                      const discountAmount = (totalPrice * percentage) / 100;
+                      const finalPrice = totalPrice - discountAmount;
+                  
+                      // Update the discount and final price
+                      discountElement.textContent = `-$${discountAmount.toFixed(2)}`;
+                      finalPriceElement.textContent = `$${finalPrice.toFixed(2)}`;
+                    }
+                  </script> -->
+                  
+                  
+             
+             
+                
+                    
             </div>
 
             <!-- Second Column (Empty/Other Content) -->
